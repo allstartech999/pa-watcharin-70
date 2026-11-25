@@ -33,7 +33,7 @@ export interface SlideItem {
     accent: string;
     badgeColor: string;
   };
-  layout: 'cover' | 'overview' | 'photo-mosaic' | 'safe-model' | 'vocational-showcase' | 'closing' | 'matrix-map';
+  layout: 'cover' | 'overview' | 'photo-mosaic' | 'safe-model' | 'vocational-showcase' | 'closing' | 'toc';
   director?: {
     name: string;
     position: string;
@@ -134,65 +134,22 @@ export const SLIDES_DATA: SlideItem[] = [
   },
 
   // =========================================================================
-  // สไลด์ที่ 2: ผังเชื่อมโยงภาพรวม (PA Alignment Matrix Slide)
+  // สไลด์ที่ 2: สารบัญรายงานผลการพัฒนางาน (Table of Contents)
   // =========================================================================
   {
     id: 2,
-    category: "ผังเชื่อมโยงภาพรวม",
-    badge: "ว.PA Integration Map",
-    title: "ผังบูรณาการเชื่อมโยง: ส่วนที่ ๑ ⟷ ส่วนที่ ๒",
-    tagline: "การพัฒนางานตามมาตรฐานตำแหน่ง ๕ ด้าน ขับเคลื่อนสู่ผลสำเร็จในประเด็นท้าทาย ๒ ด้าน",
+    category: "สารบัญ",
+    badge: "สารบัญเนื้อหา",
+    title: "สารบัญรายงานผลการพัฒนางานตามข้อตกลง (PA)",
+    tagline: "คลิกเลือกหัวข้อเพื่อเปิดดูรายละเอียดและภาพกิจกรรมในแต่ละส่วน",
     section: "home",
     theme: {
-      bgGradient: "from-indigo-50 via-white to-sky-50",
-      accent: "text-indigo-600",
-      badgeColor: "bg-indigo-500 text-white shadow-xs",
+      bgGradient: "from-sky-50 via-white to-indigo-50",
+      accent: "text-sky-600",
+      badgeColor: "bg-sky-500 text-white shadow-xs",
     },
-    layout: "matrix-map",
-    relatedLinks: [
-      {
-        targetSlideIndex: 2,
-        label: "ด้านที่ ๑ การบริหารวิชาการ",
-        badge: "ส่วนที่ ๑",
-        relationType: "contributes_to",
-        note: "ขับเคลื่อนทักษะอาชีพ ม.๑ - ม.๖",
-      },
-      {
-        targetSlideIndex: 3,
-        label: "ด้านที่ ๒ การบริหารจัดการ",
-        badge: "ส่วนที่ ๑",
-        relationType: "contributes_to",
-        note: "ฐานของ PPK Safe & Care Model",
-      },
-      {
-        targetSlideIndex: 7,
-        label: "ประเด็นท้าทายที่ ๑ (PPK Safe)",
-        badge: "ส่วนที่ ๒",
-        relationType: "derived_from",
-        note: "บูรณาการระบบดูแล ๕ ขั้นตอน",
-      },
-      {
-        targetSlideIndex: 8,
-        label: "ประเด็นท้าทายที่ ๒ (ทักษะอาชีพ)",
-        badge: "ส่วนที่ ๒",
-        relationType: "derived_from",
-        note: "บูรณาการหลักสูตร & ชุมชน",
-      },
-    ],
-    photos: [
-      {
-        title: "ส่วนที่ ๑ : ๕ ด้านมาตรฐานตำแหน่ง",
-        badge: "ฐานรากการบริหาร",
-        imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=900",
-        highlight: "วิชาการ • จัดการ • กลยุทธ์ • ชุมชน • วิชาชีพ",
-      },
-      {
-        title: "ส่วนที่ ๒ : ประเด็นท้าทายเชิงรุก",
-        badge: "ผลลัพธ์สู่ผู้เรียน",
-        imageUrl: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=900",
-        highlight: "PPK Safe & Care Model • ทักษะอาชีพ ม.๑ - ม.๖",
-      },
-    ],
+    layout: "toc",
+    photos: [],
   },
 
   // =========================================================================
