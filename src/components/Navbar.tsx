@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PA_DATA } from '../data/paData';
+import { BrandLogo } from './BrandLogo';
 import { Menu, X, Download, ShieldCheck, Sparkles, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
@@ -37,11 +38,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         <div className="flex items-center justify-between">
           {/* Logo & School Name */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-rose-400 p-0.5 shadow-md shadow-sky-200/50 group-hover:scale-105 transition-transform duration-300">
-              <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center font-heading font-black text-transparent bg-clip-text bg-gradient-to-tr from-sky-600 to-indigo-600 text-lg">
-                PA
-              </div>
-            </div>
+            <BrandLogo
+              variant="pa-monogram"
+              size="md"
+              className="rounded-2xl shadow-md shadow-sky-200/60 group-hover:scale-105 transition-transform duration-300"
+            />
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-heading font-bold text-slate-800 text-base sm:text-lg tracking-tight">

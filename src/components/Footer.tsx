@@ -1,6 +1,7 @@
 import React from 'react';
 import { PA_DATA } from '../data/paData';
-import { ExternalLink, Award, FileText, Heart } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
+import { ExternalLink, FileText } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,13 +10,16 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
           <div className="md:col-span-6 space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="font-heading font-bold text-lg text-white">
-                {PA_DATA.director.school}
-              </span>
-              <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-sky-950 text-sky-400 border border-sky-800">
-                PA {PA_DATA.meta.fiscalYear}
-              </span>
+            <div className="flex items-center gap-3">
+              <BrandLogo size="sm" />
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-heading font-bold text-lg text-white">
+                  {PA_DATA.director.school}
+                </span>
+                <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-sky-950 text-sky-400 border border-sky-800">
+                  PA {PA_DATA.meta.fiscalYear}
+                </span>
+              </div>
             </div>
             <p className="text-xs text-slate-400">
               {PA_DATA.director.name} • {PA_DATA.director.position}
